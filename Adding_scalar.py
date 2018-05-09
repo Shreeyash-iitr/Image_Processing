@@ -15,3 +15,6 @@ for x in range(0,img.shape[0]):                       # for loop traversing thro
 cv2.imshow('+653',img)
 cv2.imwrite('+653.JPG',img)                           # saving final image
 cv2.waitKey()
+
+
+# We can iterate through image with help of for loops but it is much better to use NUMPY arrays as they have very fast performance.
