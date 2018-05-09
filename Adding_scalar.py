@@ -12,6 +12,6 @@ for x in range(0,img.shape[0]):                       # for loop traversing thro
         img[x][y]+=653                                # Adding any scalar value to each pixel
 
 
-cv2.imshow('+257',img)
-cv2.imwrite('+257.JPG',img)                           # saving final image
+cv2.imshow('+653',img)
+cv2.imwrite('+653.JPG',img)                           # saving final image
 cv2.waitKey()
