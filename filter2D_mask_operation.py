@@ -9,9 +9,6 @@ import cv2
 import numpy
 # importing numpy
 
-from PIL import Image
-#importing PIL.Image
-
 img = cv2.imread('src.JPG')
 # reading image from computer
 
