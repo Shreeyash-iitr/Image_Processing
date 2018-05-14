@@ -9,7 +9,7 @@ import cv2
 import numpy
 # importing numpy
 
-img = cv2.imread('src.JPG')
+img = cv2.imread('mars.jpg')
 # reading image from computer
 
 res = numpy.zeros((img.shape[0], img.shape[1], 3),numpy.uint8)
@@ -20,7 +20,9 @@ temp = numpy.zeros((img.shape[0]+2, img.shape[1]+2,3), numpy.uint8)
 for row in range(0, img.shape[0]):
     for col in range(0, img.shape[1]):
         for color in range(0,3):
-            temp[row + 1][col + 1][color] = img[row][col][color]
+            temp.itemset((row+1,col+1,color), img.item(row,col,color))
+
+            #temp[row + 1][col + 1][color] = img[row][col][color]
 
       #  for color in range(0, 3):
 # making an image temp same as img having two extra(at boundaries) row and column initialized with zero
@@ -30,8 +32,9 @@ for row in range(0, img.shape[0]):
 for i in range(1, temp.shape[0]-1):
     for j in range(1, temp.shape[1]-1):
         for k in range(0,3):
-            res[i-1][j-1][k] = ((5*temp[i][j][k]) - (temp[i-1][j][k] + temp[i+1][j][k] + temp[i][j-1][k] + temp[i][j+1][k]))
-            print(res[i-1][j-1][k])
+            res.itemset((i-1,j-1,k), (5*temp.item(i,j,k)-temp.item(i-1,j,k)-temp.item(i+1,j,k)-temp.item(i,j-1,k)-temp.item(i,j+1,k)))
+            #res[i-1][j-1][k] = ((5*temp[i][j][k]) - (temp[i-1][j][k] + temp[i+1][j][k] + temp[i][j-1][k] + temp[i][j+1][k]))
+            #print(res[i-1][j-1][k])
             # multiplying mask matrix to get new image
 #      mask =     [0  -1   0
 #                 -1   5  -1
@@ -39,7 +42,7 @@ for i in range(1, temp.shape[0]-1):
 
 
 
-kernf = numpy.zeros([3,3])
+kernf = numpy.zeros([3,3],numpy.int8)
 kernf[0,1] = -1
 kernf[1,2] = -1
 kernf[1,0] = -1
