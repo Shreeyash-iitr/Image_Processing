@@ -1,5 +1,5 @@
 import cv2
-import numpy   pull
+import numpy   
 import urllib
 
 url='http://192.168.0.105:8080/shot.jpg'
