@@ -1,3 +1,4 @@
+# Aim is to abstract data of green curve on graph in terms of its x and y co-ordinates.
 import cv2
 import numpy
 cv2.namedWindow('graph',cv2.WINDOW_NORMAL)
