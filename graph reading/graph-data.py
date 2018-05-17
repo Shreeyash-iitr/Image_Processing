@@ -14,9 +14,7 @@ for row in range(0,graph.shape[0]):
             temp[row][col][0]= 255
             temp[row][col][1] = 255
             temp[row][col][2] = 255
-        #if all([graph[row][col][1] <= 20, graph[row][col][0] < 20, graph[row][col][2] < 20]):
-         #   for k in range(0,3):
-          #      temp[row][col][k]=graph[row][col][k]
+        
 
 gray = cv2.cvtColor(temp,cv2.COLOR_BGR2GRAY)
 ret, thresh = cv2.threshold(gray,100,255,cv2.THRESH_BINARY)
@@ -27,7 +25,7 @@ cv2.line(thresh,(145,119),(155,145),(0,0,0),1)
 cv2.line(thresh,(185,78),(188,88),(0,0,0),1)
 cv2.line(thresh,(255,119),(263,139),(0,0,0),1)
 cv2.line(thresh,(426,119),(435,143),(0,0,0),1)
-en = 0
+# making missing lines in curve---only an approximation.
 for col in range(76,469):
     for row in range(11,212):
         if thresh[row][col]==0:
