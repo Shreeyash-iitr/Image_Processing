@@ -15,7 +15,7 @@ kdx = 0.4
 kda = 0.2
 motor_s = 250
 corr =0
-max_rpm = int(0.01*((kpx*120) + (kpa*90) + (kdx*150) + (kda*90) + 300))
+max_rpm = int(0.01234*((kpx*120) + (kpa*90) + (kdx*150) + (kda*90) + 300))
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(12,GPIO.OUT) #32
