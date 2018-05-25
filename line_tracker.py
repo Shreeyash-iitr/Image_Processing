@@ -5,10 +5,10 @@ import picamera.array
 import numpy
 import RPi.GPIO as GPIO
 
-ml1 = 22
-ml2 = 11
-mr1 = 16
-mr2 = 15
+ml1 = 22  # 15
+ml2 = 5   # 29
+mr1 = 16  #36
+mr2 = 20  # 38
 kpx = 0.5
 kpa = 0.25
 kdx = 0.4
@@ -18,8 +18,8 @@ corr =0
 max_rpm = int(0.01*((kpx*120) + (kpa*90) + (kdx*150) + (kda*90) + 300))
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(18,GPIO.OUT)
-GPIO.setup(13,GPIO.OUT)
+GPIO.setup(12,GPIO.OUT) #32
+GPIO.setup(13,GPIO.OUT) #33
 #def init():
 GPIO.setup(ml2, GPIO.OUT)
 GPIO.setup(ml1, GPIO.OUT)
@@ -27,14 +27,14 @@ GPIO.setup(mr1, GPIO.OUT)
 GPIO.setup(mr2, GPIO.OUT)
 
 def forward():
-    GPIO.output(ml1,True)
-    GPIO.output(ml2, False)
-    GPIO.output(mr1, True)
-    GPIO.output(mr2, False)
+    GPIO.output(ml1,GPIO.HIGH)
+    GPIO.output(ml2,GPIO.LOW)
+    GPIO.output(mr1,GPIO.HIGH)
+    GPIO.output(mr2,GPIO.LOW)
 
 
-mr_pwm = GPIO.PWM(13,100)
-ml_pwm = GPIO.PWM(18,100)
+mr_pwm = GPIO.PWM(13,100)   # 
+ml_pwm = GPIO.PWM(12,100)   # 
 
 # Replace the URL with your own IPwebcam shot.jpg IP:port
 url='http://192.168.0.105:8080/shot.jpg'
