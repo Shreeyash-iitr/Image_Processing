@@ -24,7 +24,7 @@ for row in range(0, img.shape[0]):
 
             #temp[row + 1][col + 1][color] = img[row][col][color]
 
-      #  for color in range(0, 3):
+      
 # making an image temp same as img having two extra(at boundaries) row and column initialized with zero
 
 
