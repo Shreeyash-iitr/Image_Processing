@@ -6,7 +6,7 @@ cap = cv2.VideoCapture(0)
 while True:
     _, frame = cap.read()
     hsv = cv2.cvtColor(frame,cv2.COLOR_BGR2HSV)
-
+    # THESE VALUES ARE FOR SKIN COLOUR DETECTION
     low = numpy.array([0, 20, 25])
     up = numpy.array([22, 255, 255])
 
