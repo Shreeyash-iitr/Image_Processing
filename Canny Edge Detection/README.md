@@ -1,5 +1,5 @@
 <h1> Canny Edge Detection </h1>
-  <h4> - Algorithm with code in python </h4>
+  <h4> - Algorithm with <a href='https://github.com/Shreeyash-iitr/Image_Processing/blob/master/Canny%20Edge%20Detection/code.py'>code</a> in python </h4>
 
 
 The Canny edge detector is an edge detection operator that uses a multi-stage algorithm to detect a wide range of edges in images.</br>
