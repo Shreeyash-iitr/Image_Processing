@@ -76,5 +76,7 @@ while len(current_pix) > 0:
                         final_edges[R,C] = 255
                         new_pix.append((R,C))
     current_pix = new_pix
+
+    
 # displaying final output
 misc.imshow(final_edges)
