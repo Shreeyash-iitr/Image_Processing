@@ -22,5 +22,5 @@ calculate derivative in x and y directions, its magnitude and direction.
 <h3>(4) Apply double threshold to determine potential edges and Track edge by hysteresis</h3>
 Final output looks like : 
 <img src='images/output.jpg'>
-<h4> Output by cv2.Canny() function</h4>
+<h4> Output by cv2.Canny() function (for comparision)</h4>
 <img src='images/cv2.Canny.jpg'>
