@@ -3,7 +3,7 @@ import cv2
 import numpy
 import urllib
 import imutils
-url = "http://10.42.0.23:8080/shot.jpg"
+url = "http://10.42.0.23:8080/shot.jpg"  # Write IP of your mobile.
 
 while True:
     img = urllib.request.urlopen(url)
